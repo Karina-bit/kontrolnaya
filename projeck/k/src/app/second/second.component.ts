@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl} from '@angular/forms';
 
 @Component({
@@ -6,11 +6,13 @@ import { FormControl} from '@angular/forms';
   templateUrl: './second.component.html',
   styleUrls: ['./second.component.css']
 })
-export class SecondComponent  {
-
+export class SecondComponent implements OnInit  {
+ rootName:string;
+  
   constructor() { }
 
-  ngOnInit() {   
+  ngOnInit() { 
+    this.rootName= '' 
   }
  name= new FormControl('')
 
